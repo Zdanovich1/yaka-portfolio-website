@@ -1,0 +1,173 @@
+/*!Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+/*!------------Конец обнуления-------------*/
+
+[class*="__container"] {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.wrapper {
+   font-family: Inter Tight, sans-serif;
+}
+
+body {
+   font-size: 16px;
+}
+
+/**header*/
+
+.header__container {
+   height: 120px;
+   padding: 1rem;
+   /* border: 1px solid black;*/
+   justify-content: space-between;
+}
+
+.header__container,
+.nav__list,
+.header__socials {
+   display: flex;
+   align-items: center;
+}
+
+.header__logo {
+   pointer-events: none;
+}
+
+.header__logo h1 {
+   font-size: 2em;
+   font-weight: 900;
+}
+
+.nav__list {
+   gap: 2rem;
+}
+
+.header__socials {
+   gap: 1rem;
+}
+
+.nav__link {
+   font-size: 1em;
+   font-weight: 600;
+   color: #000;
+   text-transform: lowercase;
+   position: relative;
+}
+
+.nav__link::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -30%;
+   width: 0%;
+   height: 2px;
+   background-color: rgb(0, 0, 0);
+   transition: ease-in-out .4s;
+}
+
+.nav__link:hover:after {
+   width: 100%;
+}
+
+.socials__link img {
+   width: 2rem;
+}
+
+.socials__el {
+   padding: 0.2em;
+   transition: 0.4s;
+}
+
+.socials__el:hover {
+   transform: translateY(-0.3rem);
+}
