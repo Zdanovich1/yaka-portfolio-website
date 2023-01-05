@@ -96,7 +96,8 @@ h6 {
 }
 
 .wrapper {
-   font-family: Inter Tight, sans-serif;
+   /*font-family: Inter Tight, sans-serif;*/
+   font-family: Nunito, sans-serif;
 }
 
 body {
@@ -106,9 +107,8 @@ body {
 /**header*/
 
 .header__container {
-   height: 120px;
+   height: 56px;
    padding: 1rem;
-   /* border: 1px solid black;*/
    justify-content: space-between;
 }
 
@@ -124,8 +124,8 @@ body {
 }
 
 .header__logo h1 {
-   font-size: 2em;
-   font-weight: 900;
+   font-size: 1em;
+   font-weight: 600;
 }
 
 .nav__list {
@@ -138,9 +138,8 @@ body {
 
 .nav__link {
    font-size: 1em;
-   font-weight: 600;
+   font-weight: 500;
    color: #000;
-   text-transform: lowercase;
    position: relative;
 }
 
