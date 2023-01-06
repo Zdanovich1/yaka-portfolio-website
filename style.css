@@ -104,6 +104,10 @@ body {
    font-size: 16px;
 }
 
+button {
+   font-family: Roboto, sans-serif;
+}
+
 /**header*/
 
 .header__container {
@@ -169,4 +173,54 @@ body {
 
 .socials__el:hover {
    transform: translateY(-0.3rem);
+}
+
+/**first-screen__hello*/
+
+.hello__subtitle {
+   font-size: 1.1em;
+   line-height: 1.5em;
+   font-weight: 700;
+   color: #FDC435;
+   text-transform: uppercase;
+}
+
+.hello__greetings {
+   font-family: 'Playfair Display', serif;
+   font-weight: 700;
+   font-size: 3.5em;
+   line-height: 120%;
+}
+
+.hello__info {
+   color: #828282;
+   font-size: 1.3em;
+   line-height: 150%;
+}
+
+.hello__buttons {
+   display: flex;
+   gap: 0.8em;
+}
+
+.first-screen__btn {
+   width: 125px;
+   height: 45px;
+   font-weight: 500;
+   font-size: 1em;
+   line-height: 1.5em;
+   color: #000;
+   border-radius: 8px;
+   background: #FDC435;
+}
+
+.first-screen__btn_about {
+   background: transparent;
+   border: 2px solid #25282B;
+}
+
+.main-photo {
+   width: 400px;
+   margin: 40px;
+   clip-path: url("#blob");
 }
