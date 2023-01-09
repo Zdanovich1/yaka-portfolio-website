@@ -177,6 +177,57 @@ button {
 
 /**first-screen__hello*/
 
+.main__first-screen {
+   border: 1px solid black;
+}
+
+/*
+.first-screen__wrapper {
+   display: flex;
+   width: 200%;
+   height: 100%;
+}
+*/
+.first-screen__hello {
+   display: flex;
+   position: relative;
+}
+
+.hello__content {
+   margin-top: 3em;
+   flex-basis: 40%;
+   border: 1px solid green;
+}
+
+/*
+.hello__img {
+   border: 1px solid red;
+   flex-basis: 60%;
+   width: 768px;
+   height: 697px;
+   position: absolute;
+   right: -120px;
+   top: -58px;
+   z-index: -1;
+   background-size: cover;
+   background: url(/assets/image.jpg);
+}
+
+
+.hello__img {
+   flex-basis: 60%;
+   flex-shrink: 1;
+}
+*/
+
+.hello__img {
+   flex-basis: 60%;
+   background-image: url(/assets/image.jpg);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+
 .hello__subtitle {
    font-size: 1.1em;
    line-height: 1.5em;
@@ -190,12 +241,14 @@ button {
    font-weight: 700;
    font-size: 3.5em;
    line-height: 120%;
+   margin-top: 0.8rem;
 }
 
 .hello__info {
    color: #828282;
    font-size: 1.3em;
    line-height: 150%;
+   margin: 1.75rem 0;
 }
 
 .hello__buttons {
@@ -217,10 +270,4 @@ button {
 .first-screen__btn_about {
    background: transparent;
    border: 2px solid #25282B;
-}
-
-.main-photo {
-   width: 400px;
-   margin: 40px;
-   clip-path: url("#blob");
 }
