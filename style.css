@@ -93,11 +93,16 @@ h6 {
 [class*="__container"] {
    max-width: 1200px;
    margin: 0 auto;
+   /* padding: 0 .5em;*/
 }
 
 .wrapper {
    /*font-family: Inter Tight, sans-serif;*/
    font-family: Nunito, sans-serif;
+   max-width: 1440px;
+   margin: 0 auto;
+   overflow: hidden;
+
 }
 
 body {
@@ -177,56 +182,22 @@ button {
 
 /**first-screen__hello*/
 
-.main__first-screen {
-   border: 1px solid black;
-}
-
-/*
-.first-screen__wrapper {
-   display: flex;
+.first-screen__slider {
    width: 200%;
-   height: 100%;
-}
-*/
-.first-screen__hello {
    display: flex;
-   position: relative;
+   gap: 10%;
+   transition: 1s;
 }
 
-.hello__content {
-   margin-top: 3em;
-   flex-basis: 40%;
-   border: 1px solid green;
+.first-screen__hello,
+.main__first-screen {
+   width: 100%;
+   height: 639px;
 }
 
-/*
-.hello__img {
-   border: 1px solid red;
-   flex-basis: 60%;
-   width: 768px;
-   height: 697px;
-   position: absolute;
-   right: -120px;
-   top: -58px;
-   z-index: -1;
-   background-size: cover;
-   background: url(/assets/image.jpg);
+.first-screen__about-me {
+   width: 80%
 }
-
-
-.hello__img {
-   flex-basis: 60%;
-   flex-shrink: 1;
-}
-*/
-
-.hello__img {
-   flex-basis: 60%;
-   background-image: url(/assets/image.jpg);
-   background-size: contain;
-   background-repeat: no-repeat;
-}
-
 
 .hello__subtitle {
    font-size: 1.1em;
@@ -236,7 +207,8 @@ button {
    text-transform: uppercase;
 }
 
-.hello__greetings {
+.hello__greetings,
+.about-me__greetings {
    font-family: 'Playfair Display', serif;
    font-weight: 700;
    font-size: 3.5em;
@@ -244,7 +216,12 @@ button {
    margin-top: 0.8rem;
 }
 
-.hello__info {
+.about-me__greetings {
+   margin-top: 6rem;
+}
+
+.hello__info,
+.about-me__info {
    color: #828282;
    font-size: 1.3em;
    line-height: 150%;
@@ -267,7 +244,47 @@ button {
    background: #FDC435;
 }
 
-.first-screen__btn_about {
+.first-screen__btn_about,
+.first-screen__btn_back {
    background: transparent;
    border: 2px solid #25282B;
+}
+
+.first-screen__slider:hover {
+   margin-left: -110%;
+}
+
+.first-screen__hello,
+.first-screen__about-me {
+   display: flex;
+   position: relative;
+   justify-content: space-between;
+}
+
+.hello__content {
+   margin-top: 3em;
+   flex-basis: 40%;
+   width: 40%;
+}
+
+.hello__img {
+   width: 768px;
+   height: 697px;
+   position: absolute;
+   right: -120px;
+   top: -58px;
+   z-index: -1;
+   background-size: cover;
+   background: url(/assets/image1.png);
+}
+
+.about-me__content {
+   flex-basis: 40%;
+}
+
+.about-me__img {
+   width: 526px;
+   height: 528px;
+   background-size: cover;
+   background: url(/assets/image2.png);
 }
