@@ -245,13 +245,9 @@ button {
 }
 
 .first-screen__btn_about,
-.first-screen__btn_back {
+.first-screen__btn_return {
    background: transparent;
    border: 2px solid #25282B;
-}
-
-.first-screen__slider:hover {
-   margin-left: -110%;
 }
 
 .first-screen__hello,
