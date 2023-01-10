@@ -284,3 +284,57 @@ button {
    background-size: cover;
    background: url(/assets/image2.png);
 }
+
+/**portfolio*/
+
+.portfolio__title {
+   font-family: 'Playfair Display', serif;
+   font-weight: 700;
+   font-size: 2.5em;
+   line-height: 4rem;
+   margin-top: 4rem;
+   margin-bottom: 1.75rem;
+   text-align: center;
+}
+
+.portfolio__subtitle {
+   color: #828282;
+   font-size: 1.3em;
+   line-height: 150%;
+   margin-bottom: 1.75rem;
+}
+
+.portfolio__grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   gap: 1em;
+}
+
+
+
+.portfolio__card {
+   background: url(/assets/cards/cooking.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   transition: .4s;
+}
+
+.portfolio__card:hover {
+   transform: scale(1.03);
+}
+
+.card__outer {
+   color: #fff;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, .4);
+}
+
+.card__title {
+   font-family: 'Playfair Display', serif;
+   font-weight: 700;
+   font-size: 2em;
+   line-height: 3rem;
+   text-align: center;
+}
