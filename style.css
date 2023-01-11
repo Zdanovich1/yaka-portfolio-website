@@ -89,20 +89,20 @@ h6 {
 }
 
 /*!------------Конец обнуления-------------*/
+html {
+   scroll-behavior: smooth;
+}
 
 [class*="__container"] {
    max-width: 1200px;
    margin: 0 auto;
-   /* padding: 0 .5em;*/
 }
 
 .wrapper {
-   /*font-family: Inter Tight, sans-serif;*/
    font-family: Nunito, sans-serif;
    max-width: 1440px;
    margin: 0 auto;
    overflow: hidden;
-
 }
 
 body {
@@ -152,7 +152,8 @@ button {
    position: relative;
 }
 
-.nav__link::after {
+.nav__link::after,
+.list__link::after {
    content: "";
    position: absolute;
    left: 0;
@@ -163,7 +164,8 @@ button {
    transition: ease-in-out .4s;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.list__link:hover:after {
    width: 100%;
 }
 
@@ -292,7 +294,7 @@ button {
    font-weight: 700;
    font-size: 2.5em;
    line-height: 4rem;
-   margin-top: 4rem;
+   margin-top: 1rem;
    margin-bottom: 1.75rem;
    text-align: center;
 }
@@ -311,9 +313,56 @@ button {
    gap: 1em;
 }
 
-.portfolio__card {
-   height: 220px;
+#cooking {
    background: url(/assets/cards/cooking.jpg);
+}
+
+#psychology {
+   background: url(/assets/cards/relationship.jpg);
+}
+
+#children {
+   background: url(/assets/cards/children.jpg);
+}
+
+#home {
+   background: url(/assets/cards/interior.jpg);
+}
+
+#horoscopes {
+   background: url(/assets/cards/horoscope.jpg);
+}
+
+#sex {
+   background: url(/assets/cards/sex.jpg);
+}
+
+#stars {
+   background: url(/assets/cards/stars.jpg);
+}
+
+#repair {
+   background: url(/assets/cards/repair.jpg);
+}
+
+#beauty {
+   background: url(/assets/cards/beauty.jpg);
+}
+
+#tourism {
+   background: url(/assets/cards/tourism.jpg);
+}
+
+#marketplace {
+   background: url(/assets/cards/marketplace.jpg);
+}
+
+#networks {
+   background: url(/assets/cards/networks.jpg);
+}
+
+.portfolio__card {
+   height: 300px;
    background-size: cover;
    background-repeat: no-repeat;
    transition: .4s;
@@ -321,8 +370,14 @@ button {
    align-items: center;
    position: relative;
    border-radius: 0.5rem;
-   border: 1px solid black;
    overflow: hidden;
+   -webkit-box-shadow: -2px 6px 9px 1px rgba(131, 137, 142, 0.1);
+   -moz-box-shadow: -2px 6px 9px 1px rgba(131, 137, 142, 0.1);
+   box-shadow: -2px 6px 9px 1px rgba(131, 137, 142, 0.1);
+}
+
+.portfolio__card:hover {
+   transform: scale(1.03);
 }
 
 .card__blob {
@@ -330,8 +385,8 @@ button {
    height: 270%;
    position: absolute;
    top: -10%;
-   left: -100%;
-   transform: rotate(10deg);
+   left: -110%;
+   transform: rotate(15deg);
    transition: 1s;
 }
 
@@ -339,31 +394,6 @@ button {
    transform: scale(2);
 }
 
-/*
-.portfolio__card::before {
-   content: "";
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: url(/assets/svg/blob.svg);
-   background-repeat: no-repeat;
-   background-size: 125%;
-   background-position: top -170px left -225px;
-   z-index: 10;
-   transition: .9s;
-}
-
-.portfolio__card:hover {
-   transform: scale(1.03);
-}
-
-.portfolio__card:hover::before {
-   background-size: 315%;
-   background-position: top -650px left -275px;
-}
-*/
 .card__outer {
    position: relative;
    color: rgb(0, 0, 0);
@@ -375,8 +405,9 @@ button {
 .card__title {
    font-family: 'Playfair Display', serif;
    font-weight: 700;
-   font-size: 2em;
-   line-height: 3rem;
+   font-size: 1.75em;
+   line-height: 2.5rem;
+   width: 80%;
 }
 
 .card__subtitle {
@@ -393,26 +424,68 @@ button {
    border: 1px solid #000;
    border-radius: 1.25rem;
    background: transparent;
+   transition: .4s;
+}
+
+.card__button:hover {
+   transform: scale(1.05);
 }
 
 .card__inner {
    flex-basis: 55%;
-   display: flex;
+   display: none;
    justify-content: center;
    align-items: stretch;
 }
 
+.card__close-icon {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 2.5rem;
+   height: 2.5rem;
+   cursor: pointer;
+   transition: .5s;
+}
+
+.card__close-icon::after,
+.card__close-icon::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #000;
+}
+
+.card__close-icon::after {
+   transform: rotate(45deg);
+}
+
+.card__close-icon::before {
+   transform: rotate(-45deg);
+}
+
+.card__close-icon:hover {
+   transform: rotate(90deg);
+}
+
+
+.card__close-icon:active {
+   transform: rotate(90deg) scale(0.7);
+}
+
 .card__list {
-   display: none;
+   display: flex;
    flex-direction: column;
-   gap: 1rem;
+   gap: 1.5rem;
 }
 
 .list__link {
    font-size: 1.2em;
    font-weight: 700;
    color: #000;
-   margin-top: 55px;
    position: relative;
    z-index: 11;
 }

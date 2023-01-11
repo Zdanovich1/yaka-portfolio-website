@@ -8,12 +8,9 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
-   <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
    <title>Портфолио</title>
 </head>
 
@@ -26,7 +23,7 @@
             </div>
             <nav class="header__nav nav ">
                <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
+                  <li class="nav__item"><a href="#porfolio-section" class="nav__link">Портфолио</a></li>
                   <li class="nav__item"><a href="#" class="nav__link" id="link__about">Обо мне</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
@@ -86,12 +83,12 @@
                   </div>
                </div>
             </section>
-            <section class="main__portfolio portfolio">
+            <section class="main__portfolio portfolio" id="porfolio-section">
                <h2 class="portfolio__title">Портфолио</h2>
                <p class="portfolio__subtitle">Короткий текст на несколько предложений, обобщающий информацию о темах, с
                   которыми работаешь и не работаешь.</p>
                <div class="portfolio__grid">
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="cooking">
                      <div class="card__outer">
                         <h3 class="card__title">Кулинария</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
@@ -107,11 +104,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="psychology">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Психология, отношения</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -125,11 +125,13 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="children">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Дети</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -143,11 +145,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="home">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Дом и интерьер</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -161,11 +166,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="horoscopes">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Толкования снов, гороскопы, эзотерика</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -179,11 +187,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="sex">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">18+</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -197,11 +208,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="stars">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Звезды</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -215,11 +229,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="repair">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Ремонт, строительство</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -233,11 +250,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="beauty">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Красота, здоровье, диеты</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -251,11 +271,14 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-                  <div class="portfolio__card card">
+                  <div class="portfolio__card card" id="tourism">
                      <div class="card__outer">
-                        <h3 class="card__title">Кулинария</h3>
+                        <h3 class="card__title">Туризм</h3>
                         <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
                         <button class="card__button">Смотреть</button>
                      </div>
@@ -269,6 +292,51 @@
                            <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
                            <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
                         </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="portfolio__card card" id="marketplace">
+                     <div class="card__outer">
+                        <h3 class="card__title">Тексты для маркетплейсов</h3>
+                        <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
+                        <button class="card__button">Смотреть</button>
+                     </div>
+                     <div class="card__background">
+                        <img class="card__blob" src="/assets/svg/blob3.svg" alt="blob">
+                     </div>
+                     <div class="card__inner">
+                        <ul class="card__list list">
+                           <li class="list__el"><a href="#" class="list__link">Статья 1</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 2</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
+                        </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="portfolio__card card" id="networks">
+                     <div class="card__outer">
+                        <h3 class="card__title">Ведение социальных сетей</h3>
+                        <p class="card__subtitle">Короткое описание из одного-двух предложений.</p>
+                        <button class="card__button">Смотреть</button>
+                     </div>
+                     <div class="card__background">
+                        <img class="card__blob" src="/assets/svg/blob3.svg" alt="blob">
+                     </div>
+                     <div class="card__inner">
+                        <ul class="card__list list">
+                           <li class="list__el"><a href="#" class="list__link">Статья 1</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 2</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 3</a></li>
+                           <li class="list__el"><a href="#" class="list__link">Статья 4</a></li>
+                        </ul>
+                        <div class="card__close-icon">
+                           <span></span>
+                        </div>
                      </div>
                   </div>
                </div>
