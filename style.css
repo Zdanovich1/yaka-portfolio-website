@@ -111,6 +111,11 @@ body {
 
 button {
    font-family: Roboto, sans-serif;
+   transition: .4s;
+}
+
+button:hover {
+   transform: scale(1.05);
 }
 
 /**header*/
@@ -425,10 +430,6 @@ button {
    border-radius: 1.25rem;
    background: transparent;
    transition: .4s;
-}
-
-.card__button:hover {
-   transform: scale(1.05);
 }
 
 .card__inner {
