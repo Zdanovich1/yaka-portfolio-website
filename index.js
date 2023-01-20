@@ -6,10 +6,16 @@ const cardBtn = document.querySelectorAll('.card__button');
 const cardList = document.querySelectorAll('.card__inner');
 const cardBlob = document.querySelectorAll('.card__blob');
 const cardCloseIcons = document.querySelectorAll('.card__close-icon');
+const burgerButton = document.querySelector('.header__burger-button');
+const navList = document.querySelector('.nav__list');
+
+/*first screen slider*/
 
 aboutBtn.addEventListener('click', moveSlide);
 linkAbout.addEventListener('click', moveSlide);
 returnBtn.addEventListener('click', returnSlide);
+
+/*show portfolio item list*/
 
 cardBtn.forEach((el, index) => {
    el.addEventListener('click', function (e) {
@@ -24,6 +30,13 @@ cardCloseIcons.forEach((el, index) => {
       hideList(index);
    })
 })
+
+
+/*burger menu*/
+/*! закончить работу над меню!!!!!!!*/
+/*! закончить работу над меню!!!!!!!*/
+/*! закончить работу над меню!!!!!!!*/
+burgerButton.addEventListener('click', openMenu)
 
 /*helpers*/
 
@@ -41,4 +54,8 @@ function moveSlide() {
 
 function returnSlide() {
    firstScreenSlider.style.marginLeft = '0%';
+}
+
+function openMenu() {
+   navList.style.right = '0';
 }

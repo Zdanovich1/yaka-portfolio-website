@@ -187,6 +187,10 @@ button:hover {
    transform: translateY(-0.3rem);
 }
 
+.header__burger-button {
+   display: none;
+}
+
 /**first-screen__hello*/
 
 .first-screen__slider {
@@ -489,4 +493,78 @@ button:hover {
    color: #000;
    position: relative;
    z-index: 11;
+}
+
+/*! Adaptive*/
+/*! Adaptive*/
+/*! Adaptive*/
+
+@media screen and (max-width: 734px) {
+   /**header*/
+
+   /*! закончить работу над меню!!!!!!!*/
+   .nav__list {
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      transition: .5s;
+   }
+
+   /*! закончить работу над меню!!!!!!!*/
+   /*! закончить работу над меню!!!!!!!*/
+
+
+
+   .header__burger-button {
+      display: block;
+      width: 2.5rem;
+      height: 1.5rem;
+      position: relative;
+   }
+
+   .header__burger-button span,
+   .header__burger-button::after,
+   .header__burger-button::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 10%;
+      width: 100%;
+      background-color: #000;
+   }
+
+   .header__burger-button span {
+      top: 50%;
+   }
+
+   .header__burger-button::after {
+      top: 100%;
+   }
+
+   .header__burger-button::before {
+      top: 0;
+   }
+
+   .nav__list {
+      gap: 2rem;
+   }
+
+   .header__socials {
+      gap: 1rem;
+   }
+
+   .nav__link {
+      font-size: 1em;
+      font-weight: 500;
+      color: #000;
+      position: relative;
+   }
+
+
+
+
+
+
+
 }
