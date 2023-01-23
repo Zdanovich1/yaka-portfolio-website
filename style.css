@@ -206,6 +206,10 @@ button:hover {
    height: 639px;
 }
 
+.first-screen__hello {
+   padding-left: 1.5rem;
+}
+
 .first-screen__about-me {
    width: 80%
 }
@@ -281,8 +285,8 @@ button:hover {
    right: -120px;
    top: -58px;
    z-index: -1;
-   background-size: cover;
    background: url(/assets/image1.png);
+   background-size: cover;
 }
 
 .about-me__content {
@@ -292,8 +296,9 @@ button:hover {
 .about-me__img {
    width: 526px;
    height: 528px;
-   background-size: cover;
    background: url(/assets/image2.png);
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 
 /**portfolio*/
@@ -498,6 +503,59 @@ button:hover {
 /*! Adaptive*/
 /*! Adaptive*/
 /*! Adaptive*/
+
+@media screen and (max-width: 900px) {
+
+   /**first-screen__hello*/
+
+   .first-screen__hello {
+      padding-left: 1rem;
+   }
+
+   .hello__greetings,
+   .about-me__greetings {
+      font-size: 2.5em;
+   }
+
+   .hello__info,
+   .about-me__info {
+      font-size: 1.25em;
+   }
+
+
+
+   .first-screen__btn_about,
+   .first-screen__btn_return {
+      background: transparent;
+      border: 2px solid #25282B;
+   }
+
+   .first-screen__hello,
+   .first-screen__about-me {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+   }
+
+   .first-screen__about-me {
+      width: 100%
+   }
+
+   .hello__img {
+      position: absolute;
+      right: -170px;
+      top: -58px;
+      width: 620px;
+      height: 563px;
+   }
+
+   /*! ------------------------------*/
+   /*! ------------------------------*/
+   /*! ------------------------------*/
+   /*! ------------------------------*/
+   /*! ------------------------------*/
+
+}
 
 @media screen and (max-width: 734px) {
    /**header*/
