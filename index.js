@@ -8,6 +8,7 @@ const cardBlob = document.querySelectorAll('.card__blob');
 const cardCloseIcons = document.querySelectorAll('.card__close-icon');
 const burgerButton = document.querySelector('.header__burger-button');
 const navList = document.querySelector('.nav__list');
+const navLinks = document.querySelectorAll('.nav__link');
 
 /*first screen slider*/
 
@@ -31,12 +32,11 @@ cardCloseIcons.forEach((el, index) => {
    })
 })
 
-
 /*burger menu*/
-/*! закончить работу над меню!!!!!!!*/
-/*! закончить работу над меню!!!!!!!*/
-/*! закончить работу над меню!!!!!!!*/
-burgerButton.addEventListener('click', openMenu)
+
+burgerButton.addEventListener('click', openMenu);
+navLinks.forEach((item) => item.addEventListener('click', closeMenu));
+navList.addEventListener('click', closeMenu);
 
 /*helpers*/
 
@@ -57,5 +57,13 @@ function returnSlide() {
 }
 
 function openMenu() {
-   navList.style.right = '0';
+   navList.classList.toggle('_open');
+   document.body.classList.toggle('_lock');
+   burgerButton.classList.toggle('_active');
+}
+
+function closeMenu() {
+   navList.classList.remove('_open');
+   document.body.classList.remove('_lock');
+   burgerButton.classList.remove('_active');
 }
