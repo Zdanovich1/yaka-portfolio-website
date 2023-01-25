@@ -148,6 +148,7 @@ button:hover {
 
 .header__socials {
    gap: 1rem;
+   transition: .2s;
 }
 
 .nav__link {
@@ -155,6 +156,7 @@ button:hover {
    font-weight: 500;
    color: #000;
    position: relative;
+   transition: .6s;
 }
 
 .nav__link::after,
@@ -176,6 +178,7 @@ button:hover {
 
 .socials__link img {
    width: 2rem;
+   transition: .6s;
 }
 
 .socials__el {
@@ -196,7 +199,13 @@ button:hover {
 .first-screen__slider {
    width: 200%;
    display: flex;
-   gap: 10%;
+   /*gap: 10%;*/
+   /*!-----------------*/
+   /*!-----------------*/
+   /*!-----------------*/
+   /*!-----------------*/
+   /*!-----------------*/
+   /*!-----------------*/
    transition: 1s;
 }
 
@@ -226,7 +235,7 @@ button:hover {
 .about-me__greetings {
    font-family: 'Playfair Display', serif;
    font-weight: 700;
-   font-size: 3.5em;
+   font-size: min(calc(40px + (16 + 16 * 0.7) * (100vw - 900px) / 1200), 3.5em);
    line-height: 120%;
    margin-top: 0.8rem;
 }
@@ -512,30 +521,11 @@ button:hover {
       padding-left: 1rem;
    }
 
-   .hello__greetings,
-   .about-me__greetings {
-      font-size: 2.5em;
-   }
-
    .hello__info,
    .about-me__info {
-      font-size: 1.25em;
+      font-size: 1em;
    }
 
-
-
-   .first-screen__btn_about,
-   .first-screen__btn_return {
-      background: transparent;
-      border: 2px solid #25282B;
-   }
-
-   .first-screen__hello,
-   .first-screen__about-me {
-      display: flex;
-      position: relative;
-      justify-content: space-between;
-   }
 
    .first-screen__about-me {
       width: 100%
@@ -549,16 +539,11 @@ button:hover {
       height: 563px;
    }
 
-   /*! ------------------------------*/
-   /*! ------------------------------*/
-   /*! ------------------------------*/
-   /*! ------------------------------*/
-   /*! ------------------------------*/
-
 }
 
 @media screen and (max-width: 734px) {
    /**header*/
+
 
    .nav__list {
       flex-direction: column;
@@ -584,7 +569,7 @@ button:hover {
    }
 
    .nav__link {
-      font-size: 1.5em;
+      font-size: 1.75em;
       color: rgb(255, 255, 255);
    }
 
@@ -638,12 +623,6 @@ button:hover {
       transform: rotate(-45deg);
    }
 
-
-
-
-
-
-
    .nav__list {
       gap: 2rem;
    }
@@ -652,12 +631,36 @@ button:hover {
       gap: 1rem;
    }
 
+   /**first-screen__hello*/
+
+   .hello__img {
+      position: absolute;
+      right: 0px;
+      top: -58px;
+      width: 500px;
+      height: 454px;
+   }
+
+}
+
+@media screen and (max-width: 640px) {
+   /**header*/
+
+   .nav__link {
+      font-size: 2em;
+   }
+
+   .header__socials {
+      gap: 0.5rem;
+   }
 
 
 
+}
 
+@media screen and (max-width: 420px) {
 
-
-
-
+   .socials__link img {
+      width: 1.5rem;
+   }
 }
