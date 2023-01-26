@@ -49,7 +49,7 @@ function hideList(index) {
 }
 
 function moveSlide() {
-   firstScreenSlider.style.marginLeft = '-110%';
+   firstScreenSlider.style.marginLeft = '-100%';
 }
 
 function returnSlide() {

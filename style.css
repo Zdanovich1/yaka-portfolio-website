@@ -93,15 +93,15 @@ html {
    scroll-behavior: smooth;
 }
 
-[class*="__container"] {
+[class*="__container"],
+.wrapper {
    max-width: 1200px;
    margin: 0 auto;
+
 }
 
 .wrapper {
    font-family: Nunito, sans-serif;
-   max-width: 1440px;
-   margin: 0 auto;
    overflow: hidden;
 }
 
@@ -199,13 +199,6 @@ button:hover {
 .first-screen__slider {
    width: 200%;
    display: flex;
-   /*gap: 10%;*/
-   /*!-----------------*/
-   /*!-----------------*/
-   /*!-----------------*/
-   /*!-----------------*/
-   /*!-----------------*/
-   /*!-----------------*/
    transition: 1s;
 }
 
@@ -215,12 +208,9 @@ button:hover {
    height: 639px;
 }
 
-.first-screen__hello {
-   padding-left: 1.5rem;
-}
-
+.first-screen__hello,
 .first-screen__about-me {
-   width: 80%
+   padding-left: 1.5rem;
 }
 
 .hello__subtitle {
@@ -241,7 +231,8 @@ button:hover {
 }
 
 .about-me__greetings {
-   margin-top: 6rem;
+   margin-top: 3rem;
+   margin-bottom: 1.25rem;
 }
 
 .hello__info,
@@ -249,7 +240,7 @@ button:hover {
    color: #828282;
    font-size: 1.3em;
    line-height: 150%;
-   margin: 1.75rem 0;
+   margin: 0 0 1.25rem 0;
 }
 
 .hello__buttons {
@@ -276,39 +267,50 @@ button:hover {
 
 .first-screen__hello,
 .first-screen__about-me {
+   width: 100%;
    display: flex;
    position: relative;
    justify-content: space-between;
 }
 
 .hello__content {
-   margin-top: 3em;
-   flex-basis: 40%;
-   width: 40%;
-}
-
-.hello__img {
-   width: 768px;
-   height: 697px;
-   position: absolute;
-   right: -120px;
-   top: -58px;
-   z-index: -1;
-   background: url(/assets/image1.png);
-   background-size: cover;
+   width: 650px;
 }
 
 .about-me__content {
-   flex-basis: 40%;
+   width: 60%;
 }
 
-.about-me__img {
-   width: 526px;
-   height: 528px;
-   background: url(/assets/image2.png);
-   background-size: contain;
+.hello__content {
+   margin-top: 3em;
+}
+
+.hello__img {
+   width: 60%;
+   height: 100%;
+   position: absolute;
+   right: 0px;
+   top: -58px;
+   z-index: -1;
+   background: url(/assets/image1.png);
+   background-size: 100%;
    background-repeat: no-repeat;
 }
+
+
+.about-me__img {
+   width: 60%;
+   height: 100%;
+   background: url(/assets/image2.png);
+   background-size: 90%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+/*!-------------------*/
+/*!-------------------*/
+/*!-------------------*/
+
 
 /**portfolio*/
 
@@ -513,12 +515,27 @@ button:hover {
 /*! Adaptive*/
 /*! Adaptive*/
 
+@media screen and (max-width: 1000px) {
+   .about-me__info {
+      font-size: 1.1em;
+   }
+
+   /*!--------------------*/
+   /*!--------------------*/
+   /*!--------------------*/
+   /*!--------------------*/
+   /*!--------------------*/
+
+}
+
 @media screen and (max-width: 900px) {
 
    /**first-screen__hello*/
 
-   .first-screen__hello {
-      padding-left: 1rem;
+   .first-screen__hello,
+   .main__first-screen {
+      width: 100%;
+      height: 475px;
    }
 
    .hello__info,
@@ -526,24 +543,10 @@ button:hover {
       font-size: 1em;
    }
 
-
-   .first-screen__about-me {
-      width: 100%
-   }
-
-   .hello__img {
-      position: absolute;
-      right: -170px;
-      top: -58px;
-      width: 620px;
-      height: 563px;
-   }
-
 }
 
 @media screen and (max-width: 734px) {
    /**header*/
-
 
    .nav__list {
       flex-direction: column;
@@ -633,15 +636,29 @@ button:hover {
 
    /**first-screen__hello*/
 
+   .hello__content {
+      width: 350px;
+   }
+
    .hello__img {
-      position: absolute;
-      right: 0px;
-      top: -58px;
-      width: 500px;
-      height: 454px;
+      width: 45%;
+      right: 20px;
+      top: 50px;
+      background: url(/assets/image2.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+   }
+
+   .about-me__img {
+      width: 45%;
+      background-size: 100%;
+      background-repeat: no-repeat;
    }
 
 }
+
+
+
 
 @media screen and (max-width: 640px) {
    /**header*/
@@ -654,7 +671,50 @@ button:hover {
       gap: 0.5rem;
    }
 
+   /**first-screen__hello*/
 
+   .hello__content {
+      margin-top: 1em;
+      width: 90%;
+   }
+
+   .main__first-screen,
+   .first-screen__hello,
+   .first-screen__about-me {
+      height: 650px;
+   }
+
+   .first-screen__hello,
+   .first-screen__about-me {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-left: 0px;
+   }
+
+   .hello__img {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      right: 0px;
+      top: 0px;
+   }
+
+   .about-me__info {
+      color: #828282;
+      font-size: 1em;
+      line-height: 150%;
+      margin: 0 0 1.25rem 0;
+   }
+
+
+   .about-me__greetings {
+      margin-top: 0.5rem;
+      margin-bottom: 1.25rem;
+   }
+
+   .about-me__content {
+      width: 90%;
+   }
 
 }
 
@@ -662,5 +722,11 @@ button:hover {
 
    .socials__link img {
       width: 1.5rem;
+   }
+
+   .main__first-screen,
+   .first-screen__hello,
+   .first-screen__about-me {
+      height: 715px;
    }
 }
