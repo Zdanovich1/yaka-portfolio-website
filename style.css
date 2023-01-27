@@ -243,7 +243,8 @@ button:hover {
    margin: 0 0 1.25rem 0;
 }
 
-.hello__buttons {
+.hello__buttons,
+.about-me__buttons {
    display: flex;
    gap: 0.8em;
 }
@@ -550,6 +551,10 @@ button:hover {
       z-index: 11;
    }
 
+   .header__nav {
+      position: absolute;
+   }
+
    ._open {
       right: 0;
       overflow: auto;
@@ -640,6 +645,10 @@ button:hover {
    .about-me__content {
       width: 90%;
       margin: 0px auto;
+   }
+
+   .first-screen__about-me {
+      padding-left: 0;
    }
 
    .about-me__info {
