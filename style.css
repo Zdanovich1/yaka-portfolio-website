@@ -274,18 +274,16 @@ button:hover {
 }
 
 .hello__content {
-   width: 650px;
+   width: 500px;
+   margin-top: 3em;
 }
 
 .about-me__content {
    width: 60%;
 }
 
-.hello__content {
-   margin-top: 3em;
-}
-
 .hello__img {
+   /*width: 730px;*/
    width: 60%;
    height: 100%;
    position: absolute;
@@ -297,20 +295,14 @@ button:hover {
    background-repeat: no-repeat;
 }
 
-
 .about-me__img {
-   width: 60%;
+   width: 50%;
    height: 100%;
    background: url(/assets/image2.png);
    background-size: 90%;
    background-repeat: no-repeat;
    background-position: center;
 }
-
-/*!-------------------*/
-/*!-------------------*/
-/*!-------------------*/
-
 
 /**portfolio*/
 
@@ -515,19 +507,6 @@ button:hover {
 /*! Adaptive*/
 /*! Adaptive*/
 
-@media screen and (max-width: 1000px) {
-   .about-me__info {
-      font-size: 1.1em;
-   }
-
-   /*!--------------------*/
-   /*!--------------------*/
-   /*!--------------------*/
-   /*!--------------------*/
-   /*!--------------------*/
-
-}
-
 @media screen and (max-width: 900px) {
 
    /**first-screen__hello*/
@@ -538,14 +517,23 @@ button:hover {
       height: 475px;
    }
 
+   .hello__content {
+      width: 450px;
+   }
+
    .hello__info,
    .about-me__info {
       font-size: 1em;
    }
 
+   .about-me__greetings {
+      margin-top: 1.5rem;
+      margin-bottom: 1.25rem;
+   }
+
 }
 
-@media screen and (max-width: 734px) {
+@media screen and (max-width: 768px) {
    /**header*/
 
    .nav__list {
@@ -649,16 +637,20 @@ button:hover {
       background-repeat: no-repeat;
    }
 
+   .about-me__content {
+      width: 90%;
+      margin: 0px auto;
+   }
+
+   .about-me__info {
+      font-size: 1.1em;
+   }
+
    .about-me__img {
-      width: 45%;
-      background-size: 100%;
-      background-repeat: no-repeat;
+      display: none;
    }
 
 }
-
-
-
 
 @media screen and (max-width: 640px) {
    /**header*/
@@ -681,11 +673,10 @@ button:hover {
    .main__first-screen,
    .first-screen__hello,
    .first-screen__about-me {
-      height: 650px;
+      height: 620px;
    }
 
-   .first-screen__hello,
-   .first-screen__about-me {
+   .first-screen__hello {
       flex-direction: column-reverse;
       align-items: center;
       padding-left: 0px;
@@ -700,12 +691,8 @@ button:hover {
    }
 
    .about-me__info {
-      color: #828282;
-      font-size: 1em;
-      line-height: 150%;
-      margin: 0 0 1.25rem 0;
+      font-size: 1.1em;
    }
-
 
    .about-me__greetings {
       margin-top: 0.5rem;
@@ -714,6 +701,7 @@ button:hover {
 
    .about-me__content {
       width: 90%;
+      height: 100%;
    }
 
 }
@@ -727,6 +715,18 @@ button:hover {
    .main__first-screen,
    .first-screen__hello,
    .first-screen__about-me {
-      height: 715px;
+      height: 660px;
+   }
+
+   .hello__img {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      right: 0px;
+      top: 0px;
+   }
+
+   .about-me__info {
+      font-size: 1.05em;
    }
 }
