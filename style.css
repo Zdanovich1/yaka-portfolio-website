@@ -222,7 +222,8 @@ button:hover {
 }
 
 .hello__greetings,
-.about-me__greetings {
+.about-me__greetings,
+.portfolio__title {
    font-family: 'Playfair Display', serif;
    font-weight: 700;
    font-size: min(calc(40px + (16 + 16 * 0.7) * (100vw - 900px) / 1200), 3.5em);
@@ -308,10 +309,6 @@ button:hover {
 /**portfolio*/
 
 .portfolio__title {
-   font-family: 'Playfair Display', serif;
-   font-weight: 700;
-   font-size: 2.5em;
-   line-height: 4rem;
    margin-top: 1rem;
    margin-bottom: 1.75rem;
    text-align: center;
@@ -322,9 +319,13 @@ button:hover {
    font-size: 1.3em;
    line-height: 150%;
    margin-bottom: 1.75rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
 }
 
 .portfolio__grid {
+   padding-left: 1rem;
+   padding-right: 1rem;
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -333,54 +334,68 @@ button:hover {
 
 #cooking {
    background: url(/assets/cards/cooking.jpg);
+   background-size: cover;
+   background-position: center;
 }
 
 #psychology {
    background: url(/assets/cards/relationship.jpg);
+   background-size: cover;
 }
 
 #children {
    background: url(/assets/cards/children.jpg);
+   background-size: cover;
 }
 
 #home {
    background: url(/assets/cards/interior.jpg);
+   background-size: cover;
 }
 
 #horoscopes {
    background: url(/assets/cards/horoscope.jpg);
+   background-size: cover;
 }
 
 #sex {
    background: url(/assets/cards/sex.jpg);
+   background-size: cover;
 }
 
 #stars {
    background: url(/assets/cards/stars.jpg);
+   background-size: cover;
 }
 
 #repair {
    background: url(/assets/cards/repair.jpg);
+   background-size: cover;
 }
 
 #beauty {
    background: url(/assets/cards/beauty.jpg);
+   background-size: cover;
 }
 
 #tourism {
    background: url(/assets/cards/tourism.jpg);
+   background-size: cover;
 }
 
 #marketplace {
    background: url(/assets/cards/marketplace.jpg);
+   background-size: cover;
 }
 
 #networks {
    background: url(/assets/cards/networks.jpg);
+   background-size: cover;
 }
 
 .portfolio__card {
-   height: 300px;
+   /*height: 300px;*/
+   height: 100%;
    background-size: cover;
    background-repeat: no-repeat;
    transition: .4s;
@@ -532,6 +547,15 @@ button:hover {
       margin-bottom: 1.25rem;
    }
 
+   /**portfolio*/
+
+   .card__blob {
+      width: 220%;
+   }
+
+   .card__title {
+      font-size: 1.45em;
+   }
 }
 
 @media screen and (max-width: 768px) {
@@ -651,7 +675,8 @@ button:hover {
       padding-left: 0;
    }
 
-   .about-me__info {
+   .about-me__info,
+   .portfolio__subtitle {
       font-size: 1.1em;
    }
 
@@ -659,6 +684,30 @@ button:hover {
       display: none;
    }
 
+
+   /**portfolio*/
+
+   .portfolio__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, 1fr);
+      gap: 1em;
+   }
+
+   .portfolio__card {
+      width: 90%;
+      margin: 0px auto;
+      background-size: 120%;
+      border: 1px solid black;
+   }
+
+   .card__blob {
+      width: 245%;
+   }
+
+   .card__title {
+      font-size: 1.75em;
+   }
 }
 
 @media screen and (max-width: 640px) {
@@ -713,6 +762,20 @@ button:hover {
       height: 100%;
    }
 
+   /**portfolio*/
+
+   .card__blob {
+      width: 220%;
+   }
+
+   .card__title {
+      font-size: 1.4em;
+   }
+
+   .card__subtitle {
+      width: 90%;
+   }
+
 }
 
 @media screen and (max-width: 420px) {
@@ -735,7 +798,8 @@ button:hover {
       top: 0px;
    }
 
-   .about-me__info {
+   .about-me__info,
+   .portfolio__subtitle {
       font-size: 1.05em;
    }
 }
